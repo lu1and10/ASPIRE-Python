@@ -38,6 +38,9 @@ logger = logging.getLogger(__name__)
 def test_log_filter_by_count(caplog):
     msg = "A is for ASCII"
 
+    stream_handler = logger.handlers[0]
+    print(logging.getLevelName(stream_handler.level))
+    
     # Should log.
     logger.info(msg)
     assert msg in caplog.text
