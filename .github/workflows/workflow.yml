@@ -30,10 +30,10 @@ jobs:
       run: |
         conda info
         conda list
-        if [[ "${{ matrix.os }}" == "windows-2019" ]]
-        then
-          pip install -f https://files.pythonhosted.org/packages/a8/37/04143aee63e3773debe77979e44f85e1e22d87c1948f5acab4cca3d1ecee/finufft-2.2.0-py3-none-win_amd64.whl --no-index finufft
-        fi
+        #if [[ "${{ matrix.os }}" == "windows-2019" ]]
+        #then
+        #  pip install -f https://files.pythonhosted.org/packages/a8/37/04143aee63e3773debe77979e44f85e1e22d87c1948f5acab4cca3d1ecee/finufft-2.2.0-py3-none-win_amd64.whl --no-index finufft
+        #fi
         pip install -e ".[dev]"
         pip freeze
         python -c "import numpy; numpy.show_config()"
