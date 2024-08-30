@@ -32,8 +32,9 @@ dependencies = [
     "confuse >= 2.0.0",
     "cvxpy",
     # finufft 2.2.0 doesn't seemt to run on GHA Windows CI...
-    "finufft==2.2.0 ; sys_platform != 'win32'",
-    "finufft==2.1.0 ; sys_platform == 'win32'",
+    #"finufft==2.2.0 ; sys_platform != 'win32'",
+    #"finufft==2.1.0 ; sys_platform == 'win32'",
+    "finufft==2.3.0-rc1",
     "gemmi >= 0.6.5",
     "grpcio >= 1.54.2",
     "joblib",
